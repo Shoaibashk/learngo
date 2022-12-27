@@ -9,7 +9,12 @@ tasks:
 
   build: 
     cmds:
-      - env GOOS=linux GOARCH=arm GOARM=5 go build ./01-getting-started/main.go
+      - env GOOS=linux GOARCH=arm GOARM=5 go build {{.CLI_ARGS}}
+
+  transfer:
+    cmds:
+      - scp {{.CLI_ARGS}} ghost@192.168.0.107:~/
+
   default:
     cmds:
       - echo "{{.GREETING}}"
