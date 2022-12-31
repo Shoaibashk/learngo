@@ -28,6 +28,10 @@ func main() {
 	mp1[2] = Person{id: 2, name: "covery", car: "tesla"}
 	mp1[3] = Person{id: 3, name: "nim", car: "hammer"}
 
+	mp1Val, mp1Ok := mp1[4]
+
+	fmt.Println(mp1Val, mp1Ok)
+
 	fmt.Println(mp1)
 	val, ok := mp["shoaib"]
 
